@@ -1,0 +1,54 @@
+Software Developer - Job Description
+
+Job Title:
+
+Software Developer
+
+Location:
+
+Bangalore, Karnataka, India
+
+Job Type:
+
+Full-Time / Part-Time / Contract
+
+Job Overview:
+
+We are seeking a highly skilled and motivated Software Developer to join our team. The ideal candidate will be responsible for developing, testing, and maintaining high-quality software solutions. This role requires a thorough understanding of programming languages, software development methodologies, and hands-on experience with various tools and technologies.
+
+Key Responsibilities:
+
+Develop and implement new software programs.
+Maintain and improve the performance of existing software.
+Design and update software databases.
+Test and deploy applications and systems.
+Troubleshoot, debug, and upgrade existing systems.
+Collaborate with cross-functional teams to define, design, and ship new features.
+Participate in code reviews and contribute to best practices in software development.
+Write and maintain technical documentation.
+
+Qualifications:
+
+Bachelor’s degree in Computer Science, Information Technology, or a related field.
+Proven experience as a Software Developer or similar role.
+Proficiency in languages such as C#, Java, Python, or JavaScript.
+Familiarity with Agile development methodologies.
+Strong problem-solving skills and attention to detail.
+Excellent communication and teamwork skills.
+
+Preferred Skills:
+
+Experience with cloud technologies (AWS, Azure, GCP).
+Knowledge of DevOps practices (CI/CD pipelines, automated testing).
+Familiarity with databases (SQL, NoSQL).
+Understanding of RESTful APIs and web services.
+
+Compensation:
+
+Competitive salary based on experience.
+Health, dental, and vision insurance.
+Paid time off and flexible work hours.
+
+How to Apply:
+
+Please submit your resume and cover letter through our company portal. Applications are reviewed on a rolling basis.
