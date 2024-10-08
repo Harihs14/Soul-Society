@@ -1,0 +1,747 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CAE0964369A_v2_sub_generateChatCompletion_Create.Bundle;assembly=CAE0964369A_v2_sub_g.oDJT43BDeoM11EQ144SYgWW1" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>DocumentFormat.OpenXml.Office2010.ExcelAc</x:String>
+      <x:String>DocumentFormat.OpenXml</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>CAE0964369A_v2_sub_g.oDJT43BDeoM11EQ144SYgWW1</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>CF357C06B64_meetings.cvjo22Mbh3O1NpE462HudpE</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>DocumentFormat.OpenXml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="840.0000000000001,5320" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Resumefolder" />
+      <Variable x:TypeArguments="sd2:DataTable" Name="ResumeDT" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="668.8,855.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="resumepath" />
+        <Variable x:TypeArguments="njl:JObject" Name="path" />
+        <Variable x:TypeArguments="x:String" Name="res" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" Dismissed="{x:Null}" FormFieldsInputData="{x:Null}" FormFieldsOutputData="{x:Null}" FormHeight="{x:Null}" FormTitle="{x:Null}" FormWidth="{x:Null}" IconPath="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="a80a53a1-f9fe-48d6-8340-78aedfd52213" DevTools="False" DisableMaximizeButton="False" DisableMinimizeButton="False" DisableSanitize="False" DisplayName="Create Form" EnableAccessibility="False" FormSchema="%[{&quot;html&quot;:&quot;&lt;h3&gt;&lt;strong&gt;Software Developer - Job Description&lt;/strong&gt;&lt;/h3&gt;&lt;h4&gt;&lt;strong&gt;Job Title:&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;Software Developer&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;Location:&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;Bangalore, Karnataka, India&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;Job Type:&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;Full-Time / Part-Time / Contract&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;Job Overview:&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;We are seeking a highly skilled and motivated Software Developer to join our team. The ideal candidate will be responsible for developing, testing, and maintaining high-quality software solutions. This role requires a thorough understanding of programming languages, software development methodologies, and hands-on experience with various tools and technologies.&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;Key Responsibilities:&lt;/strong&gt;&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Develop and implement new software programs.&lt;/li&gt;&lt;li&gt;Maintain and improve the performance of existing software.&lt;/li&gt;&lt;li&gt;Design and update software databases.&lt;/li&gt;&lt;li&gt;Test and deploy applications and systems.&lt;/li&gt;&lt;li&gt;Troubleshoot, debug, and upgrade existing systems.&lt;/li&gt;&lt;li&gt;Collaborate with cross-functional teams to define, design, and ship new features.&lt;/li&gt;&lt;li&gt;Participate in code reviews and contribute to best practices in software development.&lt;/li&gt;&lt;li&gt;Write and maintain technical documentation.&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;&lt;strong&gt;Qualifications:&lt;/strong&gt;&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Bachelor’s degree in Computer Science, Information Technology, or a related field.&lt;/li&gt;&lt;li&gt;Proven experience as a Software Developer or similar role.&lt;/li&gt;&lt;li&gt;Proficiency in languages such as C#, Java, Python, or JavaScript.&lt;/li&gt;&lt;li&gt;Familiarity with Agile development methodologies.&lt;/li&gt;&lt;li&gt;Strong problem-solving skills and attention to detail.&lt;/li&gt;&lt;li&gt;Excellent communication and teamwork skills.&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;&lt;strong&gt;Preferred Skills:&lt;/strong&gt;&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Experience with cloud technologies (AWS, Azure, GCP).&lt;/li&gt;&lt;li&gt;Knowledge of DevOps practices (CI/CD pipelines, automated testing).&lt;/li&gt;&lt;li&gt;Familiarity with databases (SQL, NoSQL).&lt;/li&gt;&lt;li&gt;Understanding of RESTful APIs and web services.&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;&lt;strong&gt;Compensation:&lt;/strong&gt;&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;Competitive salary based on experience.&lt;/li&gt;&lt;li&gt;Health, dental, and vision insurance.&lt;/li&gt;&lt;li&gt;Paid time off and flexible work hours.&lt;/li&gt;&lt;/ul&gt;&lt;h4&gt;&lt;strong&gt;How to Apply:&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;Please submit your resume and cover letter through our company portal. Applications are reviewed on a rolling basis.&lt;/p&gt;&quot;,&quot;label&quot;:&quot;Content&quot;,&quot;refreshOnChange&quot;:false,&quot;key&quot;:&quot;content&quot;,&quot;type&quot;:&quot;content&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false},{&quot;label&quot;:&quot;Apply&quot;,&quot;theme&quot;:&quot;success&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;apply&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;,&quot;isResetData&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;./assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;./assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;./assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="True" StartAsMinimized="False">
+        <ufa:FormActivity.Body>
+          <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
+        </ufa:FormActivity.Body>
+        <ufa:FormActivity.DelayBody>
+          <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+            <Delay Duration="00:00:00.2500000" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          </ActivityAction>
+        </ufa:FormActivity.DelayBody>
+        <ufa:FormActivity.FormFieldsCollection>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ufa:FormActivity.FormFieldsCollection>
+      </ufa:FormActivity>
+      <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" Dismissed="{x:Null}" FormFieldsInputData="{x:Null}" FormHeight="{x:Null}" FormTitle="{x:Null}" FormWidth="{x:Null}" IconPath="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="34ed792d-5928-44fa-8bf5-e98ed7dae4d3" DevTools="False" DisableMaximizeButton="False" DisableMinimizeButton="False" DisableSanitize="False" DisplayName="Create Form" EnableAccessibility="False" FormFieldsOutputData="[resumepath]" FormSchema="%[{&quot;label&quot;:&quot;Upload Resume&quot;,&quot;customClass&quot;:&quot;filePath&quot;,&quot;showAllFileTypes&quot;:false,&quot;key&quot;:&quot;uploadResume&quot;,&quot;input&quot;:true,&quot;suffix&quot;:&quot;Select &quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;filePath&quot;,&quot;filePathExtension&quot;:[{&quot;displayName&quot;:&quot;PDF Files&quot;,&quot;value&quot;:&quot;*.pdf&quot;}]},{&quot;label&quot;:&quot;Submit&quot;,&quot;theme&quot;:&quot;success&quot;,&quot;disableOnInvalid&quot;:true,&quot;tableView&quot;:false,&quot;key&quot;:&quot;submit&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;isResetData&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;./assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;./assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;./assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="FormActivity_2" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="True" StartAsMinimized="False">
+        <ufa:FormActivity.Body>
+          <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
+        </ufa:FormActivity.Body>
+        <ufa:FormActivity.DelayBody>
+          <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+            <Delay Duration="00:00:00.2500000" sap2010:WorkflowViewState.IdRef="Delay_2" />
+          </ActivityAction>
+        </ufa:FormActivity.DelayBody>
+        <ufa:FormActivity.FormFieldsCollection>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ufa:FormActivity.FormFieldsCollection>
+      </ufa:FormActivity>
+      <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[path]" JsonString="[resumepath]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:DeserializeJson>
+      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[res]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[path("uploadResume").ToString()]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <ui:CopyFile ContinueOnError="{x:Null}" Destination="C:\Users\intel\Desktop\UIPATH HACKATHON\Resume" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="433.6,178.4" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[res]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CopyFile>
+    </Sequence>
+    <Sequence sap:VirtualizedContainerService.HintSize="668.8,4441.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="635.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[Resumefolder]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">C:\Users\intel\Desktop\UIPATH HACKATHON\Resume</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <ui:BuildDataTable DataTable="[ResumeDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="635.2,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Phone_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Role_x0020_Match&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Skill_x0020_Match&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Score_x0020_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Reason&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;IsFit&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Plagarism&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:BuildDataTable>
+      <ui:ForEachFileX DisplayName="For Each File in Folder" Filter="*.pdf" Folder="[Resumefolder]" sap:VirtualizedContainerService.HintSize="635.2,1696.8" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+        <ui:ForEachFileX.Body>
+          <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+            </ActivityAction.Argument2>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,1401.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="ResumeText" />
+                <Variable x:TypeArguments="x:String" Name="TextDT" />
+                <Variable x:TypeArguments="x:String" Name="ResponseList" />
+                <Variable x:TypeArguments="x:String" Name="JsonString" />
+                <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="myDict" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <p:DigitizeDocument DocumentObjectModel="{x:Null}" ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentPath="[CurrentFile.FullName]" DocumentText="[ResumeText]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="433.6,332" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+                <p:DigitizeDocument.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
+                    <p1:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="Faruo2xmOiJ32CZ015pG9fpC0RTY41MizzpN6o1mRdhOAiZRZOzPA4Mw6LvSgzO1kEtLlMcwISsSfxdzy64YyQ==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,24.8" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="100000">
+                      <p1:UiPathDocumentOCR.Image>
+                        <InArgument x:TypeArguments="sd:Image">
+                          <DelegateArgumentValue x:TypeArguments="sd:Image" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_1">
+                            <DelegateInArgument x:TypeArguments="sd:Image" x:Name="__ReferenceID0" Name="Image" />
+                          </DelegateArgumentValue>
+                        </InArgument>
+                      </p1:UiPathDocumentOCR.Image>
+                      <p1:UiPathDocumentOCR.PredictionId>
+                        <InArgument x:TypeArguments="x:String">
+                          <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_2">
+                            <DelegateInArgument x:TypeArguments="x:String" x:Name="__ReferenceID1" Name="PredictionId" />
+                          </DelegateArgumentValue>
+                        </InArgument>
+                      </p1:UiPathDocumentOCR.PredictionId>
+                    </p1:UiPathDocumentOCR>
+                  </ActivityFunc>
+                </p:DigitizeDocument.OCREngine>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </p:DigitizeDocument>
+              <isactr:ConnectorActivity Configuration="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" ConnectionId="07c9e85f-a801-41fb-9f20-92ae0964369a" DisplayName="Content Generation" sap:VirtualizedContainerService.HintSize="433.6,424" sap2010:WorkflowViewState.IdRef="ConnectorActivity_2" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+                <isactr:ConnectorActivity.FieldObjects>
+                  <isactr:FieldObject Name="modelName" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">gpt-35-turbo-0125</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">[ResumeText]</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+                  <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+                  <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+                  <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+                  <isactr:FieldObject Name="topK" Type="FieldArgument" />
+                  <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">None</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="topP" Type="FieldArgument" />
+                  <isactr:FieldObject Name="_file" Type="FieldArgument" />
+                  <isactr:FieldObject Name="indexID" Type="FieldArgument" />
+                  <isactr:FieldObject Name="numberOfResults" Type="FieldArgument" />
+                  <isactr:FieldObject Name="top_p" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64">1</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="instruction" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["""
+A Job Description (JD) And a Resume will be given As input. Carefully compare And check how good the JD matches With the Resume And give Me an output In this JSON format:
+Very strictly follow this output format without mistakes and provide it in syntactically proper JSON Format	
+Output Format:
+{
+name: Provide the name of the candidate
+phoneno: Provide the phone number of the candidate
+email : Provide the email of the candidate
+score: Strictly compare the JD and the resume and determine how much the Resume matches the JD On a scale Of 0 To 100 after analysing the Resume Output Format: Strictly Integer Only,
+isfit: Fill In the ""isfit"" field With a Boolean value True Or False, representing the fit Of the given Resume To the provided job description (JD). Output Format: Strictly Boolean Value Only,
+reasons: Include any Short relevant reasons Or justifications In the ""reasons"" field To support your scoring.  Output Format: Strictly English String Only,
+rolematch: &lt;rating&gt;/100 Assess And provide a Short summary On how well the candidate's background aligns with the requirements of the role Output Format: Strictly English String Only,
+skillmatch: &lt;rating&gt;/100 Assess And provide a score Out Of 100 And a Short summary On how well the candidate's skills align with the Job Description. Output Format: Strictly English String Only,
+plag: Precisely go through the resume content and accurately check whether the resume contains any plagarism Fill In the ""resume"" field With a Boolean value True Or False, representing the plagarism Output Format: Strictly Boolean Value Only
+}
+jd: 
+Software Developer - Job Description
+
+Job Title:
+
+Software Developer
+
+Location:
+
+Bangalore, Karnataka, India
+
+Job Type:
+
+Full-Time / Part-Time / Contract
+
+Job Overview:
+
+We are seeking a highly skilled and motivated Software Developer to join our team. The ideal candidate will be responsible for developing, testing, and maintaining high-quality software solutions. This role requires a thorough understanding of programming languages, software development methodologies, and hands-on experience with various tools and technologies.
+
+Key Responsibilities:
+
+Develop and implement new software programs.
+Maintain and improve the performance of existing software.
+Design and update software databases.
+Test and deploy applications and systems.
+Troubleshoot, debug, and upgrade existing systems.
+Collaborate with cross-functional teams to define, design, and ship new features.
+Participate in code reviews and contribute to best practices in software development.
+Write and maintain technical documentation.
+
+Qualifications:
+
+Bachelor’s degree in Computer Science, Information Technology, or a related field.
+Proven experience as a Software Developer or similar role.
+Proficiency in languages such as C#, Java, Python, or JavaScript.
+Familiarity with Agile development methodologies.
+Strong problem-solving skills and attention to detail.
+Excellent communication and teamwork skills.
+
+Preferred Skills:
+
+Experience with cloud technologies (AWS, Azure, GCP).
+Knowledge of DevOps practices (CI/CD pipelines, automated testing).
+Familiarity with databases (SQL, NoSQL).
+Understanding of RESTful APIs and web services.
+
+Compensation:
+
+Competitive salary based on experience.
+Health, dental, and vision insurance.
+Paid time off and flexible work hours.
+
+How to Apply:
+
+Please submit your resume and cover letter through our company portal. Applications are reviewed on a rolling basis.
+"""]</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="temperature" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Double">1</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64">0</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64">0</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="n" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64">1</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="_stop" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="out_text" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <OutArgument x:TypeArguments="x:String">[ResponseList]</OutArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <OutArgument x:TypeArguments="x:String" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <OutArgument x:TypeArguments="uiascb:v2_sub_generateChatCompletion_Create" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <OutArgument x:TypeArguments="x:String" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                </isactr:ConnectorActivity.FieldObjects>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </isactr:ConnectorActivity>
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[myDict]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[JsonConvert.DeserializeObject(Of Dictionary(Of String, Object))(ResponseList)]</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&#xA;    myDict(&quot;name&quot;).ToString(),&#xA;    myDict(&quot;email&quot;).ToString(),&#xA;    myDict(&quot;phoneno&quot;).ToString(),&#xA;    myDict(&quot;rolematch&quot;).ToString(),&#xA;    myDict(&quot;skillmatch&quot;).ToString(),&#xA;    myDict(&quot;score&quot;).ToString(),&#xA;    myDict(&quot;reasons&quot;).ToString(),&#xA;    myDict(&quot;isfit&quot;).ToString(),&#xA;&#x9;myDict(&quot;plag&quot;).ToString()  &#xA;}]" DataTable="[ResumeDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:AddDataRow>
+              <ui:OutputDataTable DataTable="[ResumeDT]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[TextDT]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:OutputDataTable>
+              <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[ResumeDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Resume" WorkbookPath="[Resumefolder+&quot;\Resume.xlsx&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:WriteRange>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachFileX.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachFileX>
+      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="635.2,2456" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="C:\Users\intel\Desktop\UIPATH HACKATHON\Resume\Resume.xlsx">
+        <ueab:ExcelApplicationCard.Body>
+          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,2163.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="jobtitle" />
+                <Variable x:TypeArguments="x:String" Name="Company" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="568,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[jobtitle]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Software Developer</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="568,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[Company]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">Deloitte</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="568,942.4" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Resume&quot;)]" SaveAfterEachRow="False">
+                <ueab:ExcelForEachRowX.Body>
+                  <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                    <ActivityAction.Argument1>
+                      <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                    </ActivityAction.Argument1>
+                    <ActivityAction.Argument2>
+                      <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                    </ActivityAction.Argument2>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="534.4,717.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="harisudhan.2205038@srec.ac.in" DisplayName="Use Gmail" EmailAddress="harisudhan.2205038@srec.ac.in" sap:VirtualizedContainerService.HintSize="500.8,657.6" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
+                        <umab:GmailApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,452.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,392.8" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot; Congratulations! You’re Selected for&quot;+ jobtitle +&quot;at&quot; + Company]" To="[CurrentRow.ByField(&quot;Email&quot;)]" UseDocumentAsBody="False">
+                                <umab:SendMailX.Files>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                </umab:SendMailX.Files>
+                                <umab:SendMailX.HtmlBodyFromFile>
+                                  <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent0.html">
+                                    <umabh:HtmlContentArgument.RuntimeImages>
+                                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                    </umabh:HtmlContentArgument.RuntimeImages>
+                                    <umabh:HtmlContentArgument.ValueMappings>
+                                      <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                                        <umabh:HtmlTextValueMapping Name="Name" Value="[CurrentRow.ByField(&quot;Name&quot;)]" />
+                                        <umabh:HtmlTextValueMapping Name="Jobtitle" Value="[jobtitle]" />
+                                        <umabh:HtmlTextValueMapping Name="Company" Value="[Company]" />
+                                      </scg:List>
+                                    </umabh:HtmlContentArgument.ValueMappings>
+                                  </umabh:HtmlContentArgument>
+                                </umab:SendMailX.HtmlBodyFromFile>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </umab:SendMailX>
+                            </Sequence>
+                          </ActivityAction>
+                        </umab:GmailApplicationCard.Body>
+                        <umab:GmailApplicationCard.ClientId>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </umab:GmailApplicationCard.ClientId>
+                        <umab:GmailApplicationCard.ClientSecret>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </umab:GmailApplicationCard.ClientSecret>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </umab:GmailApplicationCard>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelForEachRowX.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelForEachRowX>
+              <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="568,933.6" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_3" Range="[Excel.Sheet(&quot;Resume&quot;)]" SaveAfterEachRow="False">
+                <ueab:ExcelForEachRowX.Body>
+                  <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                    <ActivityAction.Argument1>
+                      <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                    </ActivityAction.Argument1>
+                    <ActivityAction.Argument2>
+                      <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                    </ActivityAction.Argument2>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="534.4,717.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="harisudhan.2205038@srec.ac.in" DisplayName="Use Gmail" EmailAddress="harisudhan.2205038@srec.ac.in" sap:VirtualizedContainerService.HintSize="500.8,657.6" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_3" Timeout="90" UseConnectionService="False">
+                        <umab:GmailApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,452.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,392.8" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot; Interview Details: One-on-One HR Interview for &quot;+ jobtitle +&quot; at &quot; + Company]" To="[CurrentRow.ByField(&quot;Email&quot;)]" UseDocumentAsBody="False">
+                                <umab:SendMailX.Files>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                </umab:SendMailX.Files>
+                                <umab:SendMailX.HtmlBodyFromFile>
+                                  <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent0.html">
+                                    <umabh:HtmlContentArgument.RuntimeImages>
+                                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                    </umabh:HtmlContentArgument.RuntimeImages>
+                                    <umabh:HtmlContentArgument.ValueMappings>
+                                      <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                                        <umabh:HtmlTextValueMapping Name="Name" Value="[CurrentRow.ByField(&quot;Name&quot;)]" />
+                                        <umabh:HtmlTextValueMapping Name="Jobtitle" Value="[jobtitle]" />
+                                        <umabh:HtmlTextValueMapping Name="Company" Value="[Company]" />
+                                      </scg:List>
+                                    </umabh:HtmlContentArgument.ValueMappings>
+                                  </umabh:HtmlContentArgument>
+                                </umab:SendMailX.HtmlBodyFromFile>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </umab:SendMailX>
+                            </Sequence>
+                          </ActivityAction>
+                        </umab:GmailApplicationCard.Body>
+                        <umab:GmailApplicationCard.ClientId>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </umab:GmailApplicationCard.ClientId>
+                        <umab:GmailApplicationCard.ClientSecret>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </umab:GmailApplicationCard.ClientSecret>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </umab:GmailApplicationCard>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelForEachRowX.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ueab:ExcelForEachRowX>
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelApplicationCard.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ueab:ExcelApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
